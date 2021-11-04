@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+    
+
+
+
+<!--ACTIVAR COMNANDO DE VISION CON CTRL+ALT+I-->
+
+
+    <!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
+    <head>
+        <title>Caminata</title>
+        <link rel="icon" type="image/png" href="Henlo.ico"/>
+        <meta name="description" content="3D Application">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+        <script type="text/javascript" src="js/webxr.js"></script>
+        <script type="text/javascript" src="js/joystick.js"></script>
+        <script type="text/javascript" src="js/camera-cube-env.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+        
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <a-scene   shadow="type: basic; autoUpdate: false;" renderer="antialias: true; colorManagement: true; physicallyCorrectLights: false;">
+            <!-- script Link -->
+            <script>
+                // component declaration
+                AFRAME.registerComponent("mylink", {
+                  // define a url in the schema
+                  schema: {
+                    href: {}
+                  },
+                  init: function() {
+                    // when clicked - change the location:
+                    this.el.addEventListener("click", (e) => {
+                      window.location = this.data.href;
+                    })
+                  }
+                })
+              </script>
+              
+            
+            <!--Assets -->
+            <a-assets>
+                <a-asset-item id="MainMesh" src="./assets/MainMesh.gltf"></a-asset-item>
+				<a-asset-item id="Book Altar" src="./assets/Book Altar.gltf"></a-asset-item>
+                <img id="sky"                 src="./resources/sky.jpg">
+                <img id="icon-play"           src="./resources/play.png">
+                <img id="icon-pause"          src="./resources/pause.png">
+                <img id="icon-play-skip-back" src="./resources/play-skip-back.png">
+                <img id="icon-mute"           src="./resources/mute.png">
+                <img id="icon-volume-low"     src="./resources/volume-low.png">
+                <img id="icon-volume-high"    src="./resources/volume-high.png">
+            </a-assets>
+            
+            <!-- camera -->
+
+            <a-entity camera="far: 10000.71; fov: 100.46" position="0 2.8 58.74613" wasd-controls="acceleration: 40.87" rotation="-14.438536437296754 16.73036761782011 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>            
+            
+            
+            
+            <!-- enviroment -->
+            
+            <a-entity environment="active: true; skyType: gradient; skyColor: #0b0e0f; horizonColor: #0a0e10; fog: 0.96; flatShading: true; groundYScale: 4.81; groundColor: #252525; groundColor2: #111111; dressing: cubes; dressingColor: #575868; dressingScale: 1.51; dressingVariance: 5 20 5; preset: checkerboard; shadow: true; ground: flat; dressingAmount: 30; gridColor: #400040; lighting: none; seed: 6" preset-switcher="" id="environment" visible=""><a-entity class="environment" position="0 50 0" light="intensity: 0.6; color: #868686; groundColor: #252525; type: hemisphere"></a-entity><a-entity class="environment" position="0 1 -0.2" light="shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10; intensity: 0.6"></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" scale="1 1 4.81" shadow="cast: false; receive: false"></a-entity><a-entity class="environmentDressing environment"></a-entity><a-sky radius="200" theta-length="110" class="environment" geometry="" material="shader: gradientshader; npot: false; topColor: #0d0d0d; bottomColor: #404040"></a-sky><a-entity id="stars" visible="false"></a-entity><a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #858687; intensity: 0.6; groundColor: #252525" visible=""></a-entity><a-entity class="environment" position="0 1 -0.2" light="intensity: 0.6; castShadow: true; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible=""></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 4.81" shadow="cast: false; receive: false"></a-entity><a-entity class="environmentDressing environment" visible=""></a-entity><a-sky radius="200" theta-length="110" class="environment" material="shader: gradientshader; topColor: #0b0e0f; bottomColor: #141414" visible="" geometry=""></a-sky><a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #858687; intensity: 0.6; groundColor: #252525" visible=""></a-entity><a-entity class="environment" position="0 1 -0.2" light="intensity: 0.6; castShadow: true; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible=""></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 4.81" shadow="cast: false"></a-entity>
+            <a-entity class="environmentDressing environment" visible=""></a-entity>
+            <a-sky radius="200" theta-length="110" class="environment" material="shader: gradientshader; topColor: #0b0e0f; bottomColor: #0a0e10" visible="" geometry=""></a-sky><a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #858687; intensity: 0.6; groundColor: #252525" visible="false"></a-entity><a-entity class="environment" position="0 1 -0.2" light="intensity: 0.6; castShadow: true; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible="false"></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 4.81" shadow="cast: false"></a-entity><a-entity class="environmentDressing environment" visible=""></a-entity><a-sky radius="200" theta-length="110" class="environment" material="shader: gradientshader; topColor: #0b0e0f; bottomColor: #0a0e10" visible="" geometry=""></a-sky><a-entity class="environment" position="0 50 0" light="type: hemisphere; color: #858687; intensity: 0.6; groundColor: #252525" visible="false"></a-entity><a-entity class="environment" position="0 1 -0.2" light="intensity: 0.6; castShadow: true; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible="false"></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="1 1 4.81" shadow="cast: false"></a-entity><a-entity class="environmentDressing environment" visible=""></a-entity><a-sky radius="200" theta-length="110" class="environment" material="shader: gradientshader; topColor: #0b0e0f; bottomColor: #0a0e10" visible="" geometry=""></a-sky></a-entity>
+            <a-entity id="#Book Altar" gltf-model="#Book Altar"  scale="1 1 1" position="-1.403910943054143e-08 2.2719008922576904 -0.38677653670310974" visible="true" shadow="cast: false" mylink="href: caminata copy.html"></a-entity>
+            <a-entity id="#MainMesh" gltf-model="./assets/MainMesh.gltf" scale="" position="-10.05151 0 1" visible="" shadow="cast: false"></a-entity>
+            <a-entity id="#MainMesh-2" gltf-model="./assets/MainMesh.gltf" scale="" position="-1.50289 0 -80" visible="" shadow="cast: false"></a-entity>
+            <a-entity id="#MainMesh-3" gltf-model="./assets/MainMesh.gltf" scale="" position="70 0 1" visible="" shadow="cast: false"></a-entity>
+            <a-entity id="#MainMesh-4" gltf-model="./assets/MainMesh.gltf" scale="" position="62.21188 0 -80" visible="" shadow="cast: false"></a-entity>
+            
+            <!-- Lights -->
+            
+            <!-- Sky -->
+            <a-sky color="#ECECEC"></a-sky>
+        </a-scene>
+
+    </body>
+</html>
