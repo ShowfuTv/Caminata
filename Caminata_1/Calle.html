@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Caminata</title>
+        <link rel="icon" type="image/png" href="Henlo.ico"/>
+        <meta name="description" content="3D Application">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+        <script type="text/javascript" src="js/webxr.js"></script>
+        <script type="text/javascript" src="js/joystick.js"></script>
+        <script type="text/javascript" src="js/camera-cube-env.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+        
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="init();">
+        <a-scene   shadow="type: basic; autoUpdate: false;" renderer="antialias: false; colorManagement: false; physicallyCorrectLights: false;">
+            <!-- Assets -->
+            <a-assets>
+				<a-asset-item id="Ed_1" src="./assets/Ed_1.gltf"></a-asset-item>
+                <a-asset-item id="Ed_2" src="./assets/Ed_2.gltf"></a-asset-item>
+            </a-assets>
+
+            <!-- Entities -->
+            <a-entity environment="active:true;skyType:atmosphere;skyColor:#88c;horizonColor:#ddd;lightPosition:0 -0.01 -0.46;fog:0.7;dressingAmount:100;grid:1x1;gridColor:#39d2f2;preset:starry" preset-switcher="" id="environment"><a-entity class="environment" position="0 50 0" light="groundColor:#553e35;intensity:0.08913300229539221;color:#a48387;type:hemisphere"></a-entity><a-entity class="environment" position="0 -0.01 -0.46" light="shadowCameraLeft:-10;shadowCameraBottom:-10;shadowCameraRight:10;shadowCameraTop:10;intensity:0.08913300229539221"></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" scale="1 1 3" shadow="cast:false;receive:false"></a-entity><a-entity class="environmentDressing environment" visible="false"></a-entity><a-sky radius="200" theta-length="110" class="environment" geometry="" material="sunPosition:0 -0.021733995409215574 -0.9997637888239164;shader:skyshader;npot:false;color:#fff"></a-sky><a-entity id="stars"></a-entity></a-entity>
+            <a-entity id="#Ed_1" gltf-model="./assets/Ed_1.gltf" scale="" position="-12.3819 2.168 -0.444" visible="" shadow="cast: false"></a-entity>
+            <a-entity id="#Ed_2" gltf-model="./assets/Ed_2.gltf" scale="" position="0 2.168 1.9219" visible="" shadow="cast: false"></a-entity>
+
+            <!-- Camera -->
+            <a-entity camera="far: 10000.71; fov: 100.46" position="-0.02221915961911948 0.44 3.267016923642965" wasd-controls="acceleration: 5.93" rotation="-6.990085100596044 3.8961130068895784 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+           
+            <!-- Lights -->
+            <!-- Edificio_1-->
+            <a-entity light="angle: 180; color: #f3d867; decay: 8.17; distance: 7.21; intensity: 4.41; penumbra: 0.72; type: spot; castShadow: true" position="-13.152 2.960 0"></a-entity>
+            <!-- Sky -->
+            <a-sky color="#ECECEC"></a-sky>
+        </a-scene>
+    </body>
+</html>
