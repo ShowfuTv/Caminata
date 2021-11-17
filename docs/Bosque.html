@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
+    <head>
+        <title>Bosque</title>
+        <link rel="icon" type="image/png" href="Henlo.ico"/>
+        <meta name="description" content="3D Application">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+        <script type="text/javascript" src="js/webxr.js"></script>
+        <script type="text/javascript" src="js/joystick.js"></script>
+        <script type="text/javascript" src="js/camera-cube-env.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="init();">
+        <a-scene   shadow="type: basic; autoUpdate: false;" renderer="antialias: false; colorManagement: false; physicallyCorrectLights: false;">
+            <!-- Assets -->
+            <a-assets>
+				<a-asset-item id="Tree" src="./assets/Tree.gltf"></a-asset-item>
+                <!--
+                <a-asset-item id="Female_torso" src="./assets/female_torso_3d_model.gltf"></a-asset-item>
+                    -->
+            </a-assets>
+
+            <!-- Entities -->
+            <a-scene shadow="type: basic; autoUpdate: false;" renderer="antialias: false; colorManagement: false; physicallyCorrectLights: false;" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="" light="">
+                <!-- Assets -->
+                <a-assets>
+                    <a-asset-item id="Tree" src="./assets/Tree.gltf"></a-asset-item>
+                    <!--
+                    <a-asset-item id="Female_torso" src="./assets/female_torso_3d_model.gltf"></a-asset-item>
+                        -->
+                </a-assets>
+    
+                <!-- Entities -->
+                        
+                <a-entity id="#Tree" gltf-model="./assets/Tree.gltf" scale="" position="0.06836633384227753 2.986560344696045 0.1169406920671463" visible="" shadow="cast: false"></a-entity>
+                <a-entity id="#Female_torso" gltf-model="" scale="" position="0.06836633384227753 2.986560344696045 0.1169406920671463" visible="false" shadow="cast: false"></a-entity>
+    
+                <!-- Camera -->
+                           
+    
+                <!-- Lights -->
+                
+    
+            
+            <div class="a-loader-title" style="display: none;">Bosque</div><a-entity light="distance: 0.75; intensity: 3.84"></a-entity><a-entity fog="color: #1a661e; density: 1.24; type: exponential"></a-entity></a-scene>		
+            <a-entity id="#Tree" gltf-model="#Tree"  scale="1 1 1" position="0.06836633384227753 2.986560344696045 0.1169406920671463" visible="true" shadow="cast: false" ></a-entity>
+            <a-entity id="#Female_torso" gltf-model="#Female_torso"  scale="1 1 1" position="0.06836633384227753 2.986560344696045 0.1169406920671463" visible="true" shadow="cast: false" ></a-entity>
+
+            <!-- Camera -->
+            <a-entity camera="far: 10000.71; fov: 100.46" position="0.22073616315149938 2.8 50.7998716936478" wasd-controls="acceleration: 15" rotation="-1.4896902673401429 -1.833464944418636 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>           
+
+            <!-- Lights -->
+            
+
+        
+        </a-scene>
+    </body>
+</html>

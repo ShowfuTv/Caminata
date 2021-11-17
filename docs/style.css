@@ -17,6 +17,13 @@ body {
   font-style: normal;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
 .contenedor1 p{
   font-size: 32px;
 }
