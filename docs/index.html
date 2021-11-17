@@ -1,17 +1,61 @@
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	(function($){$.fn.easyTabs=function(option){var param=jQuery.extend({fadeSpeed:"fast",defaultContent:1,activeClass:'active'},option);$(this).each(function(){var thisId="#"+this.id;if(param.defaultContent==''){param.defaultContent=1;}
+	if(typeof param.defaultContent=="number")
+	{var defaultTab=$(thisId+" .tabs li:eq("+(param.defaultContent-1)+") a").attr('href').substr(1);}else{var defaultTab=param.defaultContent;}
+	$(thisId+" .tabs li a").each(function(){var tabToHide=$(this).attr('href').substr(1);$("#"+tabToHide).addClass('easytabs-tab-content');});hideAll();changeContent(defaultTab);function hideAll(){$(thisId+" .easytabs-tab-content").hide();}
+	function changeContent(tabId){hideAll();$(thisId+" .tabs li").removeClass(param.activeClass);$(thisId+" .tabs li a[href=#"+tabId+"]").closest('li').addClass(param.activeClass);if(param.fadeSpeed!="none")
+	{$(thisId+" #"+tabId).fadeIn(param.fadeSpeed);}else{$(thisId+" #"+tabId).show();}}
+	$(thisId+" .tabs li").click(function(){var tabId=$(this).find('a').attr('href').substr(1);changeContent(tabId);return false;});});}})(jQuery);
+	</script>
+	<link rel="stylesheet" href="specimen_files/specimen_stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
+    <style type="text/css">
+        body{
+    font-family: 'vt323regular';
+                }
+</style>
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        $('#container').easyTabs({defaultContent:1});
+    });
+</script>
 </head>
 <body>
-    <h1>prueba</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse libero similique, placeat odio veniam nisi sapiente quaerat velit sed laborum sunt aspernatur tempora quisquam autem eveniet harum. Sunt, soluta? Esse.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse libero similique, placeat odio veniam nisi sapiente quaerat velit sed laborum sunt aspernatur tempora quisquam autem eveniet harum. Sunt, soluta? Esse.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse libero similique, placeat odio veniam nisi sapiente quaerat velit sed laborum sunt aspernatur tempora quisquam autem eveniet harum. Sunt, soluta? Esse.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse libero similique, placeat odio veniam nisi sapiente quaerat velit sed laborum sunt aspernatur tempora quisquam autem eveniet harum. Sunt, soluta? Esse.</p>
-<a href="caminata.html">Caminata</a>
-<a href="Calle.html">Calle</a>
+    <div class="contenedor1">
+        <p>¿Qué haces aquí?</p>
+    </div>
+    <div class="contenedor1">
+        <p>Te conozco,</p>
+    </div>
+    <div class="contenedor1">
+        <p>Te recuerdo,</p>
+    </div>
+    <div class="contenedor1">
+        <p>Esa mirada no ha cambiado en todo este tiempo</p>
+    </div>
+    <div class="contenedor1">
+        <p>Es sorprendente como terminaste aquí</p>
+    </div>
+    <div class="contenedor1">
+        <p>Debes saber que los trechos y senderos que vienen por delante no son gratos ni amables en lo absoluto. Tampoco te quedan muchas opciones </p>
+    </div>
+    <div class="contenedor1">
+        <p>Quedarse mucho tiempo tampoco es buena idea</p>
+    </div>
+    <div class="contenedor1">
+        <a href="caminata.html">Caminata</a>
+        <a href="Calle.html">Calle</a>
+    </div>
+       
 </body>
 </html>

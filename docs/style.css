@@ -4,7 +4,48 @@ a-scene{
   z-index: -1;
 }
 */
+body {
+  background-color: black;
+  font-family: var(woff);
+}
 
+@font-face {
+  font-family: 'vt323regular';
+  src: url('docs\font\vt323-regular-webfont.woff') format('woff2'),
+       url('docs\font\vt323-regular-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.contenedor1 p{
+  font-size: 32px;
+}
+
+.contenedor1{
+  width: 40%;
+  height: 300px;
+  padding: 25%;
+  text-align: center;
+  margin: auto; 
+}
+.contenedor1 p{
+  color: white;
+}
+a:link, a:visited {
+  background-color: #50154b50;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: rgba(23, 13, 68, 0.199);
+  text-align: center;
+  font-size: large;
+  color: cyan;
+}
 .controller {
     position: fixed;
     display: block;
@@ -12,10 +53,10 @@ a-scene{
     height: 100px;
     left: 25px;
     bottom: 20px;
-    background-color: #c8c8c880;
+    background-color: #00000080;
     z-index: 20;
     border-radius: 50%;
-    border: 3px solid gray;
+    border: 3px solid rgb(31, 31, 31);
     background-image: url("/resources/controller.png");
     background-position: center;
     background-repeat: no-repeat;
