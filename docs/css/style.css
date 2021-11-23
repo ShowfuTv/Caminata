@@ -9,14 +9,6 @@ body {
   font-family: var(woff);
 }
 
-@font-face {
-  font-family: 'vt323regular';
-  src: url('docs\font\vt323-regular-webfont.woff') format('woff2'),
-       url('docs\font\vt323-regular-webfont.woff2') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 img {
   display: block;
   margin-left: auto;
