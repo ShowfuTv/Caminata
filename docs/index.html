@@ -1,13 +1,39 @@
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="Henlo.ico"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="css\style.css" type="text/css" charset="utf-8" />
 	<link rel="stylesheet" href="css\stylesheet.css" type="text/css" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
     <title>Estás perdido</title>
 </head>
 <body>
+    <div> 
+        <button onclick="playPause()" class="btn"><i class="material-icons" style="font-size:48px;color:rgb(255, 255, 255)">&#xe050;</i></button> 
+        <br><br>
+        <audio id="video1">
+            <source src="sound\0001.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio> 
+      </div> 
+      
+      <script> 
+      var myVideo = document.getElementById("video1"); 
+      
+      function playPause() { 
+        if (myVideo.paused) 
+          myVideo.play(); 
+        else 
+          myVideo.pause(); 
+      } 
+     
+      </script> 
+    
+
+    
     <div class="contenedor1">
         <p>¿Qué haces aquí?</p>
     </div>
@@ -27,7 +53,7 @@
         <p>Es sorprendente como terminaste aquí</p>
     </div>
     <div class="contenedor1">
-        <p>Debes saber que los trechos y senderos que vienen por delante no son gratos ni amables en lo absoluto. Tampoco te quedan muchas opciones </p>
+        <p>Debes saber que los trechos y senderos que vienen por delante no son gratos ni amables para los que reien llegan. Tampoco te quedan muchas opciones </p>
     </div>
     <div class="contenedor1">
         <p>Quedarse mucho tiempo tampoco es buena idea</p>
@@ -38,6 +64,7 @@
         <a href="caminata.html">Caminata</a>
         <a href="Calle.html">Calle</a>
         <a href="Bosque.html">Bosque</a>
+        <a href="Un-paseo.html">Un paseo</a>
     </div>
 </body>
 </html>
