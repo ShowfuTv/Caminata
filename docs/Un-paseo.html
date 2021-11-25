@@ -4,14 +4,31 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="css\style.css" type="text/css" charset="utf-8" />
 	<link rel="stylesheet" href="css\stylesheet.css" type="text/css" charset="utf-8" />
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <title>Un paseo</title>
 </head>
-<body>
-    <video controls width="320" height="100%" autoplay muted>
-        <source src="resources\are ya winning.mp4" type="video/mp4">
+<body><div> 
+    <button onclick="disableMute()" class="btn"><i class="material-icons" style="font-size:48px;color:rgb(255, 255, 255)">&#xe050;</i></button> 
+    <br><br>
+    <video id="video1" width="320" height="100%" autoplay muted>
+        <source src="resources\aaaaaaaaaaaaaaaaaaa.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+  </div> 
+  
+  <script> 
+  var vid = document.getElementById("video1"); 
+  
+  function disableMute() { 
+  vid.muted = false;
+}
+ 
+  </script> 
+  <div class="contenedor1">
+      <a href="index.html">Vuelve</a>
+      <p>Antes de que te pierdas como él</p>
+  </div>
+    
 </body>
 </html>

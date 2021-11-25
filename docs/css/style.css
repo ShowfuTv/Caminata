@@ -8,18 +8,18 @@ body {
   background-color: black;
   font-family: var(woff);
 }
-
-img {
+.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 50%;
 }
 
 video {
   width: 100%;
   margin: auto; 
 }
+
 
 .btn {
   background-color: black;
