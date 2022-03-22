@@ -37,13 +37,13 @@ video {
 
 .contenedor1{
   width: 40%;
-  height: 300px;
+  height: 150px;
   padding: 25%;
   text-align: center;
   margin: auto; 
 }
 .contenedor1 p{
-  color: white;
+  color: greenyellow;
 }
 a:link, a:visited {
   background-color: #50154b50;
